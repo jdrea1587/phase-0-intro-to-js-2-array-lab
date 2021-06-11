@@ -1,5 +1,6 @@
 // Write your solution here!
 const cats = ["Milo", "Otis", "Garfield"];
+const copyOfCats = [...cats];
 
 function destructivelyAppendCat(name)
     {
@@ -23,20 +24,20 @@ function destructivelyRemoveFirstCat(name)
 
 function appendCat(name)
     {
-        return [...cats, name];
+        return [...copyOfCats, name];
     }
 
 function prependCat(name)
     {
-        return [name, ...cats];
+        return [name, ...copyOfCats];
     }
 
 function removeLastCat(name)
     {
-        return cats.slice(0,cats.length-1);
+        return copyOfCats.slice(0,copyOfCats.length-1);
     }    
 
 function removeFirstCat(name)
     {
-        return cats.slice(1);
+        return copyOfCats.slice(1);
     }
